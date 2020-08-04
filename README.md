@@ -30,3 +30,22 @@ Levantar un servidor LAMP para un Datalogger ModBus con cliente TCP
   - [VNC viewer](https://www.realvnc.com/es/connect/download/viewer/)
   - [balenaEtcher](url)
   - [Raspberrry Pi 32-bits with Desktop](https://downloads.raspberrypi.org/raspios_full_armhf_latest)
+  
+###### Instalacion incial paso a paso:
+1. Descargar SO que se utilizara (en este caso se ocupara Raspberry Pi OS 32-bits with Desktop)
+
+2. Descargar la ISO
+
+3. Descomprimir el archivo .rar
+
+4. Quemar la ISO en la SD con tu quemador favorito, yo use balenaEtcher
+
+5. Conectar la Raspberrry a Internet mediante WLAN o Ethernet y ver la IP en la terminal con el comando if-config
+
+6. Abrir PuTTy y ingresar con la IP de nuestra Raspberrry
+
+7. Habilitar la conexion con VNC viewer con el comando sudo raspi-config opcion 5, P3, Yes (imagen)
+
+8. Establecer IP fija en raspi-config
+
+9. Expander SD en raspi-config

@@ -54,7 +54,7 @@ if-config
 
 ![3](https://user-images.githubusercontent.com/68520248/89311349-ddc43e00-d643-11ea-86c4-8216bca9ef47.PNG)
 
-7. Establecer IP fija
+7. Establecer IP fija, en la opcion Network Settings
 
 ![4](https://user-images.githubusercontent.com/68520248/89312130-e0736300-d644-11ea-864d-2add08fd2bb9.PNG)
 

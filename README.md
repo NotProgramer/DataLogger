@@ -52,13 +52,30 @@ if-config
 
 ![3](https://user-images.githubusercontent.com/68520248/89311349-ddc43e00-d643-11ea-86c4-8216bca9ef47.PNG)
 
-7. Abrir PuTTy y ingresar con la IP de nuestra Raspberrry
-
-8. Establecer IP fija en raspi-config
+7. Establecer IP fija
 
 ![4](https://user-images.githubusercontent.com/68520248/89312130-e0736300-d644-11ea-864d-2add08fd2bb9.PNG)
 
 ![5](https://user-images.githubusercontent.com/68520248/89312133-e1a49000-d644-11ea-9fdd-f164cdc9ea67.PNG)
 
+8. Conectarce a VNC viewer
+
+![6](https://user-images.githubusercontent.com/68520248/89312665-8757ff00-d645-11ea-8df9-15a08f4a9806.png)
+
+![7](https://user-images.githubusercontent.com/68520248/89312675-8a52ef80-d645-11ea-8ae7-af2397d6b38a.PNG)
 
 9. Expander SD en raspi-config
+
+![8](https://user-images.githubusercontent.com/68520248/89313137-1fee7f00-d646-11ea-852a-6d32c377bec7.PNG)
+
+![9](https://user-images.githubusercontent.com/68520248/89313142-211fac00-d646-11ea-920a-f871478a4869.PNG)
+
+![10](https://user-images.githubusercontent.com/68520248/89313144-21b84280-d646-11ea-8b60-166efafceb5c.PNG)
+
+**Una vez que terminemos estos pasos ya estamos listo para empezar a montar nuestro servidor LAMP.**
+
+Comenzaremos actualizando nuestra Raspberrry, para esto abriremos nuestra terminal y ejecutaremos los siguientes comandos:
+```
+sudo apt update && sudo apt upgrade -y
+```
+

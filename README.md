@@ -25,8 +25,8 @@ Levantar un servidor LAMP para un Datalogger ModBus con cliente TCP
  - Notebook para bajar y quemar la imagen ISO a la microSD.
  - Adaptador microSD a USB.
 
-Software utilizado en el proyecto:
-    PuTTy (url)
-    VNC viewer (url)
-    balenaEtcher (url)
-    Raspberrry Pi 32-bits with Desktop (url)
+###### Software utilizado en el proyecto:
+  - [PuTTy](https://www.putty.org/)
+  - [VNC viewer](https://www.realvnc.com/es/connect/download/viewer/)
+  - [balenaEtcher](url)
+  - [Raspberrry Pi 32-bits with Desktop](https://downloads.raspberrypi.org/raspios_full_armhf_latest)

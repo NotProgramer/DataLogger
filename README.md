@@ -40,15 +40,15 @@ Levantar un servidor LAMP para un Datalogger ModBus con cliente TCP
 
 4. Quemar la ISO en la SD con tu quemador favorito, yo use balenaEtcher
 
-5. Conectar la Raspberrry a Internet mediante WLAN o Ethernet y ver la IP en la terminal con el comando if-config
-
-6. Abrir PuTTy y ingresar con la IP de nuestra Raspberrry
-
-7. Habilitar la conexion con VNC viewer con el comando 
+5. Conectar la Raspberrry a Internet mediante WLAN o Ethernet y ver la IP en la terminal con el comando
 ```
-sudo raspi-config
+if-config
 ```
-   opcion 5, P3, Yes (imagen)
+6. Habilitar conexion con SSH y VNC viewer
+
+7. Abrir PuTTy y ingresar con la IP de nuestra Raspberrry
+
+(imagen)
 
 8. Establecer IP fija en raspi-config
 

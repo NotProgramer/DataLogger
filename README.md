@@ -44,7 +44,7 @@ Levantar un servidor LAMP para un Datalogger ModBus con cliente TCP
 
 ![1](https://user-images.githubusercontent.com/68520248/89311342-db61e400-d643-11ea-9bed-35979164ce23.PNG)
 
-5. Conectar la Raspberrry a Internet mediante WLAN o Ethernet y ver la IP en la terminal con el comando
+5. Conectar la Raspberry a Internet mediante WLAN o Ethernet y ver la IP en la terminal con el comando
 ```
 if-config
 ```

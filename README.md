@@ -219,4 +219,26 @@ Listo!, ya tenemos nuestro LAMP levantado y operando sin problemas
 
 ### Instalación de Python y librerias usadas
 
-Una vez nuestra Raspberry este con nuestro servidor LAMPP levantado procederemos con todo lo que es python y librerias que tendremos que descargar
+###### Una vez nuestra Raspberry este con nuestro servidor LAMPP levantado procederemos con todo lo que es python y librerias que tendremos que descargar
+
+Veremos si nuestra Raspberry tiene acutlizaciones
+```
+sudo apt update && sudo apt upgrade -y
+```
+
+Una vez actuliazada, procedemos a intalar python y la libreria IDLE
+```
+sudo apt install python3 idle3
+```
+![28](https://user-images.githubusercontent.com/68520248/89331697-330e4880-d660-11ea-8b0a-aac1f27d33f3.PNG)
+
+Terminada la instalacion lo unico que faltaria es instalar la libreria para hacer la conexion con ModBus
+```
+sudo apt-get install -y python3-pymodbus
+```
+Y la libreria para hacer la conexion con la Base de Datos
+```
+pip3 install mysql-connector-python
+```
+
+###### Proximamente Grafana

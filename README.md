@@ -78,12 +78,42 @@ Comenzaremos actualizando nuestra Raspberrry, para esto abriremos nuestra termin
 ```
 sudo apt update && sudo apt upgrade -y
 ```
-Una vez finalizada la instalacion tendremos que dar permisos a el directorio
+![11](https://user-images.githubusercontent.com/68520248/89315062-6644dd80-d648-11ea-891a-914350e4178f.PNG)
+
+Actulizada nuestra Raspi, instalaremos apache
+```
+sudo apt install apache2
+```
+![12](https://user-images.githubusercontent.com/68520248/89315068-66dd7400-d648-11ea-9333-0c3ad48c3a92.PNG)
+
+Ya finalizada la instalacion tendremos que dar permisos a el directorio
 ```
 sudo a2enmod rewrite
 sudo systemctl restart apache2
 sudo chown -R pi:www-data /var/www/html/
 sudo chmod -R 770 /var/www/html/
+```
+
+Y tendremos que modificar el .conf de apache
+```
+sudo nano /etc/apache2/apache2.conf
+```
+![13](https://user-images.githubusercontent.com/68520248/89315521-f2ef9b80-d648-11ea-9dad-25a1cf657eda.PNG)
+
+Buscamos la siguiente linea con Ctrl+W 
+```
+/var/
+```
+Y remplazamos en <Directory /> la opcion AllowOverride a All
+![14](https://user-images.githubusercontent.com/68520248/89315528-f420c880-d648-11ea-86f0-fb10ff3698c0.PNG)
+
+Por ultimo guardamos el edit con
+```
+Crtl + O
+```
+Y Cerramos el archivo con
+```
+Ctrl + X
 ```
 
 

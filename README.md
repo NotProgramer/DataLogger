@@ -31,7 +31,7 @@ Levantar un servidor LAMP para un Datalogger ModBus con cliente TCP
   - [PuTTy](https://www.putty.org/)
   - [VNC viewer](https://www.realvnc.com/es/connect/download/viewer/)
   - [balenaEtcher](https://www.balena.io/etcher/)
-  - [Raspberrry Pi 32-bits with Desktop](https://downloads.raspberrypi.org/raspios_full_armhf_latest)
+  - [Raspberry Pi 32-bits with Desktop](https://downloads.raspberrypi.org/raspios_full_armhf_latest)
   
 ###### **Instalacion incial paso a paso:**
 1. Descargar SO que se utilizara en este caso se ocupara Raspberry Pi OS 32-bits with Desktop [Click Descarga directa](https://downloads.raspberrypi.org/raspios_full_armhf_latest) 

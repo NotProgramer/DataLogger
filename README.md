@@ -5,7 +5,7 @@ Levantar un servidor LAMP para un Datalogger ModBus con cliente TCP
 
 ###### Hadware utilizado para este proyecto:
 
-1. Raspberry pi 3 b+
+ - **Raspberry pi 3 b+: 
  - *Ficha tecnica:
  - CPU + GPU: Broadcom BCM2837B0, Cortex-A53 (ARMv8) 64-bit SoC @ 1.4GHz
  - RAM: 1GB LPDDR2 SDRAM
@@ -19,6 +19,7 @@ Levantar un servidor LAMP para un Datalogger ModBus con cliente TCP
  - Salida de audio estéreo y vídeo compuesto
  - Micro-SD
  - Power-over-Ethernet (PoE)*
+
  - Tarjeta microSD 16GB clase10.
  - Teclado, mouse, Monitor con entrada HDMI.
  - Notebook para bajar y quemar la imagen ISO a la microSD.

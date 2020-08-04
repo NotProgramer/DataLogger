@@ -3,7 +3,7 @@
 ## Desafio: 
 Levantar un servidor LAMP para un Datalogger ModBus con cliente TCP 
 
-###### Hadware utilizado para este proyecto:
+### Hadware utilizado para este proyecto:
 
  - **Raspberry pi 3 b+:** 
  - *Ficha tecnica:*
@@ -27,7 +27,7 @@ Levantar un servidor LAMP para un Datalogger ModBus con cliente TCP
  - **Notebook para bajar y quemar la imagen ISO a la microSD.**
  - **Adaptador microSD a USB.**
 
-###### Software utilizado en el proyecto:
+### Software utilizado en el proyecto:
   - [PuTTy](https://www.putty.org/)
   - [VNC viewer](https://www.realvnc.com/es/connect/download/viewer/)
   - [balenaEtcher](https://www.balena.io/etcher/)
@@ -74,7 +74,7 @@ if-config
 
 ![10](https://user-images.githubusercontent.com/68520248/89313144-21b84280-d646-11ea-8b60-166efafceb5c.PNG)
 
-**Una vez que terminemos estos pasos ya estamos listo para empezar a montar nuestro servidor LAMP.**
+#### **Una vez que terminemos estos pasos ya estamos listo para empezar a montar nuestro servidor LAMP.**
 
 Comenzaremos actualizando nuestra Raspberrry, para esto abriremos nuestra terminal o PuTTy y ejecutaremos los siguientes comandos:
 ```
@@ -216,3 +216,7 @@ Y luego confirmamos
 ![27](https://user-images.githubusercontent.com/68520248/89324319-1ae4fc00-d655-11ea-9d2e-51a841f90c9e.PNG)
 
 Listo!, ya tenemos nuestro LAMP levantado y operando sin problemas
+
+### Instalación de Python y librerias usadas
+
+Una vez nuestra Raspberry este con nuestro servidor LAMPP levantado procederemos con todo lo que es python y librerias que tendremos que descargar

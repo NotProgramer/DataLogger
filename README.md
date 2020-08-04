@@ -7,25 +7,25 @@ Levantar un servidor LAMP para un Datalogger ModBus con cliente TCP
 
  - **Raspberry pi 3 b+:** 
  - *Ficha tecnica:*
- - *CPU + GPU: Broadcom BCM2837B0, Cortex-A53 (ARMv8) 64-bit SoC @ 1.4GHz*
- - *RAM: 1GB LPDDR2 SDRAM*
- - *Wi-Fi + Bluetooth: 2.4GHz y 5GHz IEEE 802.11.b/g/n/ac, Bluetooth 4.2, BLE*
- - *Ethernet: Gigabit Ethernet sobre USB 2.0 (300 Mbps)*
- - *GPIO de 40 pines*
- - *HDMI*
- - *4 puertos USB 2.0*
+ - *CPU + GPU: Broadcom BCM2837B0, Cortex-A53 (ARMv8) 64-bit SoC @ 1.4GHz.*
+ - *RAM: 1GB LPDDR2 SDRAM.*
+ - *Wi-Fi + Bluetooth: 2.4GHz y 5GHz IEEE 802.11.b/g/n/ac, Bluetooth 4.2, BLE.*
+ - *Ethernet: Gigabit Ethernet sobre USB 2.0 (300 Mbps).*
+ - *GPIO de 40 pines.*
+ - *HDMI.*
+ - *4 puertos USB 2.0.*
  - *Puerto CSI para conectar una cámara.*
- - *Puerto DSI para conectar una pantalla táctil*
- - *Salida de audio estéreo y vídeo compuesto*
- - *Micro-SD*
- - *Power-over-Ethernet (PoE)*
+ - *Puerto DSI para conectar una pantalla táctil.*
+ - *Salida de audio estéreo y vídeo compuesto.*
+ - *Micro-SD.*
+ - *Power-over-Ethernet (PoE).*
  
  ![raspi](https://user-images.githubusercontent.com/68520248/89323116-41a23300-d653-11ea-83a9-f71f60ba87de.png)
 
- - Tarjeta microSD 16GB clase10.
- - Teclado, mouse, Monitor con entrada HDMI.
- - Notebook para bajar y quemar la imagen ISO a la microSD.
- - Adaptador microSD a USB.
+ - **Tarjeta microSD 16GB clase10.**
+ - **Teclado, mouse, Monitor con entrada HDMI.**
+ - **Notebook para bajar y quemar la imagen ISO a la microSD.**
+ - **Adaptador microSD a USB.**
 
 ###### Software utilizado en el proyecto:
   - [PuTTy](https://www.putty.org/)
@@ -190,5 +190,29 @@ FLUSH PRIVILEGES;
 Para salir de MariaDB podemos apretar Crtl + C o \q
 
 ![22](https://user-images.githubusercontent.com/68520248/89321686-42d26080-d651-11ea-99d9-a61b59f6f165.PNG)
+
+Ya como ultimo paso instalamos phpmyadmin
+```
+sudo apt-get install phpmyadmin
+```
+![23](https://user-images.githubusercontent.com/68520248/89324311-191b3880-d655-11ea-8f7c-b44dfd7f3174.PNG)
+
+En el proceso de intalacion nos aparecera un recuadro donde tendremos que seleccionar nuestro motor, en nuestro caso apache2,
+lo seleccionamos con la tecla espacio, tabulamos y apretamos enter
+
+![24](https://user-images.githubusercontent.com/68520248/89324314-19b3cf00-d655-11ea-8051-3baf06235bfc.PNG)
+
+luego nos preguntara si queremos crear la base de datos predeterminada de phpmyadmin, si eres un usuario inexperto te recomiendo
+darle a si.
+
+![25](https://user-images.githubusercontent.com/68520248/89324315-1a4c6580-d655-11ea-9e0b-5bf59cee4c6f.PNG)
+
+Terminado esto nos pedira asignar una contraseña para ingresar con el usuario root
+
+![26](https://user-images.githubusercontent.com/68520248/89324316-1a4c6580-d655-11ea-9b0c-d0428b6b27c2.PNG)
+
+Y luego confirmamos
+
+![27](https://user-images.githubusercontent.com/68520248/89324319-1ae4fc00-d655-11ea-9d2e-51a841f90c9e.PNG)
 
 Listo!, ya tenemos nuestro LAMP levantado y operando sin problemas

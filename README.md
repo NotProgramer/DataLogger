@@ -34,9 +34,9 @@ Levantar un servidor LAMP para un Datalogger ModBus con cliente TCP
   - [Raspberry Pi 32-bits with Desktop](https://downloads.raspberrypi.org/raspios_full_armhf_latest)
   
 ###### **Instalacion incial paso a paso:**
-1. Descargar el Sistema Operativo que se utilizara en este caso se ocupara Raspberry Pi OS 32-bits with Desktop [Click Descarga directa](https://downloads.raspberrypi.org/raspios_full_armhf_latest) 
+1. Descargar el Sistema Operativo que se utilizara en este caso se ocupara Raspberry Pi OS 32-bits with Desktop
 
-2. Descargar la ISO
+2. Descargar la ISO [Click Descarga directa](https://downloads.raspberrypi.org/raspios_full_armhf_latest) 
 
 3. Descomprimir el archivo .rar
 
@@ -54,7 +54,7 @@ if-config
 
 ![3](https://user-images.githubusercontent.com/68520248/89311349-ddc43e00-d643-11ea-86c4-8216bca9ef47.PNG)
 
-7. Establecer IP fija, en la opcion Network Settings
+7. Establecer IP fija, en la opcion Network Settings. Ejemplo:
 
 ![4](https://user-images.githubusercontent.com/68520248/89312130-e0736300-d644-11ea-864d-2add08fd2bb9.PNG)
 
@@ -66,7 +66,7 @@ if-config
 
 ![7](https://user-images.githubusercontent.com/68520248/89312675-8a52ef80-d645-11ea-8ae7-af2397d6b38a.PNG)
 
-9. Expander SD en raspi-config
+9. Expander SD, enla terminal ejecutamos raspi-config
 
 ![8](https://user-images.githubusercontent.com/68520248/89313137-1fee7f00-d646-11ea-852a-6d32c377bec7.PNG)
 
@@ -76,7 +76,7 @@ if-config
 
 #### **Una vez que terminemos estos pasos ya estamos listo para empezar a montar nuestro servidor LAMP.**
 
-Comenzaremos actualizando nuestra Raspberrry, para esto abriremos nuestra terminal o PuTTy y ejecutaremos los siguientes comandos:
+Comenzaremos actualizando nuestra Raspberry, para esto abriremos nuestra terminal o PuTTy y ejecutaremos los siguientes comandos:
 ```
 sudo apt update && sudo apt upgrade -y
 ```
@@ -241,4 +241,77 @@ Y la libreria para hacer la conexion con la Base de Datos
 pip3 install mysql-connector-python
 ```
 
-###### Proximamente Grafana
+###### Grafana
+
+Primero que todo, y como ya lo hicimos anteriormente, tendremos que actualizar nuestra Raspberry
+```
+sudo apt update && sudo apt upgrade -y
+```
+Luego descargamos el paquete Grafana abriendo la terminal y colocando
+```
+wget https://dl.grafana.com/oss/release/grafana_5.4.0_armhf.deb
+```
+![29](https://user-images.githubusercontent.com/68520248/89345952-4b895d80-d676-11ea-8a81-0961605ad704.PNG)
+
+Una vez descargado procedemos a instalarlo
+```
+sudo dpkg -i grafana_5.4.0_armhf.deb
+```
+
+![30](https://user-images.githubusercontent.com/68520248/89345954-4cba8a80-d676-11ea-88b3-8e7384d29032.PNG)
+
+Y ejecutamos lo siguiente:
+```
+sudo /bin/systemctl daemon-reload
+sudo /bin/systemctl enable grafana-server
+```
+
+Configura servicio
+```
+sudo /bin/systemctl daemon-reload
+```
+
+Habilita servicio Grafana
+```
+sudo /bin/systemctl enable grafana-server
+```
+
+Arranca servicio Grafana
+```
+sudo /bin/systemctl start grafana-server
+```
+
+#### Finalizado, solo queda conectar nuestro Grafana a nuesta DB
+
+Para esto ingresamos a nuestro navegador y en el buscador de url insertamos la IP de nuestra Raspberry con el puerto 3000
+
+![31](https://user-images.githubusercontent.com/68520248/89345955-4cba8a80-d676-11ea-9c56-dd373bbf7261.PNG)
+
+Los datos por defecto para ingresar son 
+```
+Usuario: admin
+Contraseña: admin
+```
+![32](https://user-images.githubusercontent.com/68520248/89346095-81c6dd00-d676-11ea-8766-559265fca1f1.PNG)
+
+Para vincular nuesta DB nos vamos al panel de la izquierda, en el simbolo de engranaje opcion Data Sources
+
+![33](https://user-images.githubusercontent.com/68520248/89346843-b7b89100-d677-11ea-9dd5-c7be25698ed8.png)
+
+Agregamos nuesta BD con el boton Add Data Source
+
+![34](https://user-images.githubusercontent.com/68520248/89346848-b8e9be00-d677-11ea-9167-fd9208af6a37.PNG)
+
+Y seleccionamos MySQL
+
+![35](https://user-images.githubusercontent.com/68520248/89346851-b8e9be00-d677-11ea-83ce-ccf4afda37f7.PNG)
+
+Luego rellenamos los campos como en el ejemplo que les dejo acontinuacion
+
+![36](https://user-images.githubusercontent.com/68520248/89346852-b9825480-d677-11ea-8bef-df72aafd5f2f.PNG)
+
+Y guardamos con el boton Save & Test
+
+![37](https://user-images.githubusercontent.com/68520248/89346854-bab38180-d677-11ea-8749-0fe722920d69.PNG)
+
+Si todo salio bien, saldra el cuadro que se ve en la imagen anterior

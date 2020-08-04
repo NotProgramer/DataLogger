@@ -147,4 +147,46 @@ Se abrira una ventana con la info de la version de php que se instalo
 
 ![17](https://user-images.githubusercontent.com/68520248/89318563-f2f19a80-d64c-11ea-97e8-464e290ccea9.PNG)
 
+Ya con php y Apache instalaremos nuestra base de datos, en este proyecto se utilizo MariaDB, por su optimizacion y soporte brindado por su comunidad,
+ocuparemos el comando
+```
+sudo apt-get install mariadb-server
+```
+![18](https://user-images.githubusercontent.com/68520248/89319165-bffbd680-d64d-11ea-85ce-8d38034d5b25.PNG)
 
+Terminada la instalacion eliminamos la configuracion por defecto y problemas de seguridad, con el siguiente script
+```
+sudo mysql_secure_installation
+```
+Nos dira que ingresemos la contraseña de root, como nostros aun no se la asignabamos apretaremos Enter, echo esto podremos generar nuestra nueva contraseña
+
+![19](https://user-images.githubusercontent.com/68520248/89319690-7790e880-d64e-11ea-9d9c-8f71d3c5fedb.PNG)
+
+Finalizado esto nos saldran mas opciones, aca les dejo una foto de como lo deben hacer
+
+![20](https://user-images.githubusercontent.com/68520248/89319691-78297f00-d64e-11ea-9f6b-400e1ca1a9bf.PNG)
+
+Continuando con la instalacion de MariaDB tendremos que crear nustro usuario que ocuparemos mas adelante para ingresar a phpmyadmin o de nuestra terminal sin problemas, para esto volvemos a nuestra terminal o PuTTy e ingrasamos con el comando
+```
+sudo mysql -u root
+```
+
+![21](https://user-images.githubusercontent.com/68520248/89321683-4239ca00-d651-11ea-9895-241531f17195.PNG)
+
+Posteriormente debemos de generar un nuevo Usuario, Para esto ejecutamos las siguiente sentencia
+```
+CREATE USER 'usuario'@'localhost' IDENTIFIED BY 'contraseña';
+```
+Y le asignamos permisos
+```
+GRANT ALL PRIVILEGES ON *.* TO 'usuario'@'localhost';
+```
+Una vez hayamos finalizado con los permisos, el último paso será refrescarlos
+```
+FLUSH PRIVILEGES;
+```
+Para salir de MariaDB podemos apretar Crtl + C o \q
+
+![22](https://user-images.githubusercontent.com/68520248/89321686-42d26080-d651-11ea-99d9-a61b59f6f165.PNG)
+
+Listo!, ya tenemos nuestro LAMP levantado y operando sin problemas

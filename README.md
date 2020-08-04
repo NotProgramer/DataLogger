@@ -20,7 +20,7 @@ Levantar un servidor LAMP para un Datalogger ModBus con cliente TCP
  - *Micro-SD.*
  - *Power-over-Ethernet (PoE).*
  
- ![raspi](https://user-images.githubusercontent.com/68520248/89323116-41a23300-d653-11ea-83a9-f71f60ba87de.png)
+ ![rpi_large](https://user-images.githubusercontent.com/68520248/89328335-3fdc6d80-d65b-11ea-80c7-c0bde1aaabeb.png)
 
  - **Tarjeta microSD 16GB clase10.**
  - **Teclado, mouse, Monitor con entrada HDMI.**

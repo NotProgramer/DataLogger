@@ -117,4 +117,34 @@ Y Cerramos el archivo con
 Ctrl + X
 ```
 
+Realizados todos estos pasos procederemos a instalar la libreria libapache2-mod-php junto con php
+```
+sudo apt install libapache2-mod-php
+```
+![15](https://user-images.githubusercontent.com/68520248/89317434-567ac880-d64b-11ea-9f77-57e7f5ace9c5.PNG)
+
+Reiniciamos el servicio apache
+```
+sudo service apache2 restart
+```
+
+Terminando esto ya tendriamos apache2 y php instalado funcionando con nuestra libreria libapache.
+
+Para poder comprobar si php se instalo de manera correcta haremos la siguiente prueba:
+1. creamos un archivo php con el comando
+```
+sudo nano /var/www/html/pruebaphp.php
+```
+2. y le añadimos el siguiente texto:
+```
+<?php phpinfo(); ?>
+```
+Si todo funciono, abriremos nuestro navegador y en la url colocamos el IP de nuestra Raspberry mas /pruebaphp.php
+
+![16](https://user-images.githubusercontent.com/68520248/89318561-f1c06d80-d64c-11ea-82b6-89d37229d65d.PNG)
+
+Se abrira una ventana con la info de la version de php que se instalo
+
+![17](https://user-images.githubusercontent.com/68520248/89318563-f2f19a80-d64c-11ea-97e8-464e290ccea9.PNG)
+
 

@@ -137,7 +137,7 @@ Para poder comprobar si php se instalo de manera correcta haremos la siguiente p
 ```
 sudo nano /var/www/html/pruebaphp.php
 ```
-2. y le añadimos el siguiente texto:
+2. le añadimos el siguiente texto:
 ```
 <?php phpinfo(); ?>
 ```

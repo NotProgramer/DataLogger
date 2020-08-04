@@ -74,8 +74,16 @@ if-config
 
 **Una vez que terminemos estos pasos ya estamos listo para empezar a montar nuestro servidor LAMP.**
 
-Comenzaremos actualizando nuestra Raspberrry, para esto abriremos nuestra terminal y ejecutaremos los siguientes comandos:
+Comenzaremos actualizando nuestra Raspberrry, para esto abriremos nuestra terminal o PuTTy y ejecutaremos los siguientes comandos:
 ```
 sudo apt update && sudo apt upgrade -y
 ```
+Una vez finalizada la instalacion tendremos que dar permisos a el directorio
+```
+sudo a2enmod rewrite
+sudo systemctl restart apache2
+sudo chown -R pi:www-data /var/www/html/
+sudo chmod -R 770 /var/www/html/
+```
+
 

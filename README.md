@@ -294,6 +294,10 @@ Contraseña: admin
 ```
 ![32](https://user-images.githubusercontent.com/68520248/89346095-81c6dd00-d676-11ea-8766-559265fca1f1.PNG)
 
+Nos pedira cambiar la contraseña, aqui insertamos la password para ingresar mas adelante 
+
+![38](https://user-images.githubusercontent.com/68520248/89350155-76c37b00-d67d-11ea-8729-4d4b2befd467.PNG)
+
 Para vincular nuesta DB nos vamos al panel de la izquierda, en el simbolo de engranaje opcion Data Sources
 
 ![33](https://user-images.githubusercontent.com/68520248/89346843-b7b89100-d677-11ea-9dd5-c7be25698ed8.png)

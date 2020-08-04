@@ -40,7 +40,7 @@ Levantar un servidor LAMP para un Datalogger ModBus con cliente TCP
 
 4. Quemar la ISO en la SD con tu quemador favorito, yo use balenaEtcher
 
-https://user-images.githubusercontent.com/68520248/89311021-75755c80-d643-11ea-80ab-9e3b7fa00953.PNG
+![1](https://user-images.githubusercontent.com/68520248/89311342-db61e400-d643-11ea-9bed-35979164ce23.PNG)
 
 5. Conectar la Raspberrry a Internet mediante WLAN o Ethernet y ver la IP en la terminal con el comando
 ```
@@ -48,11 +48,17 @@ if-config
 ```
 6. Habilitar conexion con SSH y VNC viewer
 
-https://user-images.githubusercontent.com/68520248/89311026-760df300-d643-11ea-8c7d-51429e5ff3ee.PNG
-https://user-images.githubusercontent.com/68520248/89311027-773f2000-d643-11ea-8434-e0aac6280e2f.PNG
+![2](https://user-images.githubusercontent.com/68520248/89311346-dc931100-d643-11ea-9719-284e9eb0145b.PNG)
+
+![3](https://user-images.githubusercontent.com/68520248/89311349-ddc43e00-d643-11ea-86c4-8216bca9ef47.PNG)
 
 7. Abrir PuTTy y ingresar con la IP de nuestra Raspberrry
 
 8. Establecer IP fija en raspi-config
+
+![4](https://user-images.githubusercontent.com/68520248/89312130-e0736300-d644-11ea-864d-2add08fd2bb9.PNG)
+
+![5](https://user-images.githubusercontent.com/68520248/89312133-e1a49000-d644-11ea-9fdd-f164cdc9ea67.PNG)
+
 
 9. Expander SD en raspi-config

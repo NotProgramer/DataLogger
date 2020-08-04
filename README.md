@@ -46,9 +46,9 @@ if-config
 ```
 6. Habilitar conexion con SSH y VNC viewer
 
-7. Abrir PuTTy y ingresar con la IP de nuestra Raspberrry
-
 (imagen)
+
+7. Abrir PuTTy y ingresar con la IP de nuestra Raspberrry
 
 8. Establecer IP fija en raspi-config
 

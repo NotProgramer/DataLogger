@@ -40,13 +40,16 @@ Levantar un servidor LAMP para un Datalogger ModBus con cliente TCP
 
 4. Quemar la ISO en la SD con tu quemador favorito, yo use balenaEtcher
 
+https://user-images.githubusercontent.com/68520248/89311021-75755c80-d643-11ea-80ab-9e3b7fa00953.PNG
+
 5. Conectar la Raspberrry a Internet mediante WLAN o Ethernet y ver la IP en la terminal con el comando
 ```
 if-config
 ```
 6. Habilitar conexion con SSH y VNC viewer
 
-(imagen)
+https://user-images.githubusercontent.com/68520248/89311026-760df300-d643-11ea-8c7d-51429e5ff3ee.PNG
+https://user-images.githubusercontent.com/68520248/89311027-773f2000-d643-11ea-8434-e0aac6280e2f.PNG
 
 7. Abrir PuTTy y ingresar con la IP de nuestra Raspberrry
 

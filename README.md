@@ -105,6 +105,7 @@ Buscamos la siguiente linea con Ctrl+W
 /var/
 ```
 Y remplazamos en <Directory /> la opcion AllowOverride a All
+
 ![14](https://user-images.githubusercontent.com/68520248/89315528-f420c880-d648-11ea-86f0-fb10ff3698c0.PNG)
 
 Por ultimo guardamos el edit con

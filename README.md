@@ -44,7 +44,11 @@ Levantar un servidor LAMP para un Datalogger ModBus con cliente TCP
 
 6. Abrir PuTTy y ingresar con la IP de nuestra Raspberrry
 
-7. Habilitar la conexion con VNC viewer con el comando sudo raspi-config opcion 5, P3, Yes (imagen)
+7. Habilitar la conexion con VNC viewer con el comando 
+```
+sudo raspi-config
+```
+   opcion 5, P3, Yes (imagen)
 
 8. Establecer IP fija en raspi-config
 

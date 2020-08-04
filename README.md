@@ -34,7 +34,7 @@ Levantar un servidor LAMP para un Datalogger ModBus con cliente TCP
   - [Raspberry Pi 32-bits with Desktop](https://downloads.raspberrypi.org/raspios_full_armhf_latest)
   
 ###### **Instalacion incial paso a paso:**
-1. Descargar SO que se utilizara en este caso se ocupara Raspberry Pi OS 32-bits with Desktop [Click Descarga directa](https://downloads.raspberrypi.org/raspios_full_armhf_latest) 
+1. Descargar el Sistema Operativo que se utilizara en este caso se ocupara Raspberry Pi OS 32-bits with Desktop [Click Descarga directa](https://downloads.raspberrypi.org/raspios_full_armhf_latest) 
 
 2. Descargar la ISO
 

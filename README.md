@@ -318,4 +318,60 @@ Y guardamos con el boton Save & Test
 
 ![37](https://user-images.githubusercontent.com/68520248/89346854-bab38180-d677-11ea-8749-0fe722920d69.PNG)
 
-Si todo salio bien, saldra el cuadro que se ve en la imagen anterior
+Si todo salio bien, saldra el cuadro que se ve en la imagen anterior.
+
+### Agregado para trabajar sin interfaz grafica
+
+Luego de que grafana no cumpliera con un requisito que necesitabamos, decidimos usar la raspi solo como un almacenador de data, por lo cual instalamos la version del Sistema operativo sin interfaz grafica [Descargar](https://downloads.raspberrypi.org/raspios_lite_armhf_latest)
+
+Para nuestra sorpresa la version lite del SO, no venia con python 3 intalado a si que tuvimos que hacer lo siguiente:
+Instalamos python3 abriendo nuestra terminal con Putty y ejecutando el siguiente comando
+```
+sudo apt-get install -y build-essential tk-dev libncurses5-dev libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev libexpat1-dev liblzma-dev zlib1g-dev libffi-dev
+```
+Que es un pre-requisito, luego descargamos python desde
+```
+wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tgz
+```
+(Aqui pueden elegir la version que quieran descargar, nosotros estamos trabjando con python 3.7.0)
+Y por ultimo extraemos el paquete con los siguientes comandos
+```
+sudo tar zxf Python-3.7.0.tgz
+```
+```
+cd Python-3.7.0
+```
+```
+sudo ./configure
+```
+```
+sudo make -j 4
+```
+```
+sudo make altinstall
+```
+**Se pone una linea a la vez** 
+
+Y luego de terminado el proceso dejaremos python 3.7 como predeterminado
+```
+vim ~/.bashrc
+```
+```
+alias python='/usr/local/bin/python3.7'
+```
+```
+source ~/.bashrc
+```
+```
+which python3.7
+```
+```
+/usr/local/bin/python3.7
+```
+Listo python 3.7.0 instalado y predeterminado, para comprovar si esta todo correcto escribimos
+```
+python -V
+```
+Tendria que arrojar la version que instalamos, en nuestro caso python 3.7.0
+
+## Proximamente se adjuntara las fotos ;)

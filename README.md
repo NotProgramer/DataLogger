@@ -1,9 +1,9 @@
-# Raspberry Datalogger ModBus
+# Raspberry Datalogger ModBus :pager:
 
 ## Desafio: 
 Levantar un servidor LAMP para un Datalogger ModBus con cliente TCP 
 
-### Hadware utilizado para este proyecto:
+### Hadware utilizado para este proyecto::computer:
 
  - **Raspberry pi 3 b+:** 
  - *Ficha tecnica:*
@@ -27,13 +27,13 @@ Levantar un servidor LAMP para un Datalogger ModBus con cliente TCP
  - **Notebook para bajar y quemar la imagen ISO a la microSD.**
  - **Adaptador microSD a USB.**
 
-### Software utilizado en el proyecto:
+### Software utilizado en el proyecto: :floppy_disk:
   - [PuTTy](https://www.putty.org/)
   - [VNC viewer](https://www.realvnc.com/es/connect/download/viewer/)
   - [balenaEtcher](https://www.balena.io/etcher/)
   - [Raspberry Pi 32-bits with Desktop](https://downloads.raspberrypi.org/raspios_full_armhf_latest)
   
-###### **Instalacion incial paso a paso:**
+###### **Instalacion incial paso a paso:** :pushpin:
 1. Descargar el Sistema Operativo que se utilizara en este caso se ocupara Raspberry Pi OS 32-bits with Desktop
 
 2. Descargar la ISO [Click Descarga directa](https://downloads.raspberrypi.org/raspios_full_armhf_latest) 
@@ -74,7 +74,7 @@ if-config
 
 ![10](https://user-images.githubusercontent.com/68520248/89313144-21b84280-d646-11ea-8b60-166efafceb5c.PNG)
 
-#### **Una vez que terminemos estos pasos ya estamos listo para empezar a montar nuestro servidor LAMP.**
+#### **Una vez que terminemos estos pasos ya estamos listo para empezar a montar nuestro servidor LAMP.** :ok_hand:
 
 Comenzaremos actualizando nuestra Raspberry, para esto abriremos nuestra terminal o PuTTy y ejecutaremos los siguientes comandos:
 ```
@@ -217,7 +217,7 @@ Y luego confirmamos
 
 Listo!, ya tenemos nuestro LAMP levantado y operando sin problemas
 
-### Instalación de Python y librerias usadas
+### Instalación de Python y librerias usadas :books:
 
 ###### Una vez nuestra Raspberry este con nuestro servidor LAMPP levantado procederemos con todo lo que es python y librerias que tendremos que descargar
 
@@ -320,7 +320,7 @@ Y guardamos con el boton Save & Test
 
 Si todo salio bien, saldra el cuadro que se ve en la imagen anterior.
 
-### Agregado para trabajar sin interfaz grafica
+### Agregado para trabajar sin interfaz grafica :hammer:
 
 Luego de que grafana no cumpliera con un requisito que necesitabamos, decidimos usar la raspi solo como un almacenador de data, por lo cual instalamos la version del Sistema operativo sin interfaz grafica [Descargar](https://downloads.raspberrypi.org/raspios_lite_armhf_latest)
 
@@ -374,4 +374,79 @@ python -V
 ```
 Tendria que arrojar la version que instalamos, en nuestro caso python 3.7.0
 
-## Proximamente se adjuntara las fotos ;)
+**Habilitar conexion con workbench y Nuestro IDLE (VSCodium)** 
+
+En nuestra terminal abrir el siguiente archivo con nuestro editor de texto en este caso nano
+```
+sudo nano/etc/mysql/mariadb.conf.d/50-server.cnf
+```
+
+Busca la linea con el texto bind-address con Ctrl+W
+
+y Reemplazamos
+```
+# this is read by the standalone daemon and embedded servers
+[server]
+
+# this is only for the mysqld standalone daemon
+[mysqld]
+
+#
+# * Basic Settings
+#
+user                             = mysql
+pid-file                        = /var/run/mysqld/mysqld.pid
+socket                          = /var/run/mysqld/mysqld.sock
+port                              = 3306
+basedir                        = /usr
+datadir                        = /var/lib/mysql
+tmpdir                         = /tmp
+lc-messages-dir         = /usr/share/mysql
+skip-external-locking
+
+
+ 
+# Instead of skip-networking the default is now to listen only on
+# localhost which is more compatible and is not less secure.
+bind-address              = 127.0.0.1
+
+#
+# * Fine Tuning
+```
+Por
+```
+# this is read by the standalone daemon and embedded servers
+[server]
+
+# this is only for the mysqld standalone daemon
+[mysqld]
+
+
+ 
+#
+# * Basic Settings
+#
+user                             = mysql
+pid-file                        = /var/run/mysqld/mysqld.pid
+socket                          = /var/run/mysqld/mysqld.sock
+port                              = 3306
+basedir                        = /usr
+datadir                        = /var/lib/mysql
+tmpdir                         = /tmp
+lc-messages-dir         = /usr/share/mysql
+skip-external-locking
+
+# Instead of skip-networking the default is now to listen only on
+# localhost which is more compatible and is not less secure.
+bind-address              = 0.0.0.0
+
+#
+# * Fine Tuning
+```
+
+Guardamos el archivo con Ctrl+O y salimos con Ctrl+X. Por ultimo reiniciamos el servicio
+```
+sudo systemctl restart mariadb.service
+```
+Terminado :smiley:
+## Proximamente se adjuntara las fotos :wink:

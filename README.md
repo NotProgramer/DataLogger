@@ -29,6 +29,7 @@ Levantar un servidor LAMP para un Datalogger ModBus con cliente TCP
 
 ### Software utilizado en el proyecto: :floppy_disk:
   - [PuTTy](https://www.putty.org/)
+  - [VSCodium](https://vscodium.com/)
   - [VNC viewer](https://www.realvnc.com/es/connect/download/viewer/)
   - [balenaEtcher](https://www.balena.io/etcher/)
   - [Raspberry Pi 32-bits with Desktop](https://downloads.raspberrypi.org/raspios_full_armhf_latest)
@@ -372,7 +373,19 @@ Listo python 3.7.0 instalado y predeterminado, para comprovar si esta todo corre
 ```
 python -V
 ```
-Tendria que arrojar la version que instalamos, en nuestro caso python 3.7.0
+Tendria que arrojar la version que instalamos, en nuestro caso python 3.7.0.
+
+Para instalar librerias mas facilmente recomendamos instalar la funcion pip3
+```
+sudo apt-get install python3-pip
+```
+
+Un ejemplo de como usarlo seria el siguiente:
+```
+pip3 install mysql-connector-python
+```
+
+Con eso descargariamos el connector con mysql, una libreria que se usa en este proyecto.
 
 **Habilitar conexion con workbench y Nuestro IDLE (VSCodium)** 
 
